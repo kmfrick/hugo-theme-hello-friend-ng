@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <main aria-role="main" style="max-width: 800px; margin: 0 auto; padding: 10px; box-sizing: border-box;">
+    <main aria-role="main" style="max-width: 1000px; margin: 0 auto; padding: 10px; box-sizing: border-box;">
         <style>
             @media (max-width: 768px) {
                 #main-content {
@@ -22,7 +22,7 @@
             }
         </style>
         <div id="main-content" style="display: flex; flex-wrap: wrap;">
-            <div id="photo-content" style="text-align: center; padding: 10px; align-self: center;">
+            <div id="photo-content" style="text-align: center; padding: 10px; align-self: center; padding-right: 60px;">
                 {{ if .Site.Params.portrait.path }}
                     <img src="{{ .Site.Params.portrait.path }}" class="circle" alt="{{ .Site.Params.portrait.alt }}" style="max-width: 100%;" />
                 {{ end }}
