@@ -8,6 +8,10 @@
 <meta name="theme-color" content="{{ .Site.Params.themeColor }}" />
 <link rel="canonical" href="{{ .Permalink }}" />
 
+<!-- Open links in new tab or window -->
+<base target="_blank">
+
+
 {{ block "title" . }}
     <title>
         {{ if .IsHome }}
