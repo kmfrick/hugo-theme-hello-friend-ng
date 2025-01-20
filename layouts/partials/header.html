@@ -5,7 +5,7 @@
                 {{ with .Site.Params.Logo.logoText }}{{ . }}{{ else }}hello{{ end }}</span>
 
         <span class="header__right">
-            {{ if len .Site.Menus }}
+            {{- if len .Site.Menus }}
                 {{ partial "menu.html" . }}
                 <span class="menu-trigger">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -13,7 +13,7 @@
                         <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
                     </svg>
                 </span>
-            {{ end }}
+            {{- end }}
 
             {{- if .Site.Params.EnableThemeToggle }}
                 <span class="theme-toggle not-selectable">{{ partial "theme-toggle-icon.html" . }}</span>

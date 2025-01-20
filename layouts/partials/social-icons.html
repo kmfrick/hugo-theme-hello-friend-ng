@@ -1,9 +1,5 @@
 <ul style="list-style-type: none;">                  
 {{ range . -}}
-<li style="display: flex; align-items: center; margin: 12px 0">
-    {{ partial "svg.html" . }}&nbsp;&nbsp;
-    <a href="{{ .url }}" target="_blank" rel="me noopener {{ .rel }}" title="{{ .name | humanize }}" style="white-space: nowrap;">{{.hrname }}</a>
-</li>
-
+    &nbsp; <a href="{{ .url }}" {{if eq .nonewpage 0}} target="_blank" {{end}} rel="me noopener {{ .rel }}" title="{{ .name | humanize }}">{{ partial "svg.html" . }}</a> &nbsp;
 {{- end -}}
 </ul>
